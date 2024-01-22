@@ -27,7 +27,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
-    suggest_lsp_servers = false,
+    suggest_lsp_servers = true,
     sign_icons = {
         error = 'E',
         warn = 'W',
@@ -57,3 +57,23 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+-- require('mason-lspconfig').setup({
+--     handlers = {
+--         lsp.default_setup,
+--         pylsp = function ()
+--             require('lspconfig').pylsp.setup({
+--                 autostart=true,
+--             })
+--         end,
+--         ruff_lsp = function ()
+--             require('lspconfig').ruff_lsp.setup({
+--                 autostart=false,
+--             })
+--         end,
+--         pyright = function ()
+--             require('lspconfig').pyright.setup({
+--                 autostart=false,
+--             })
+--         end,
+--     }
+-- })
